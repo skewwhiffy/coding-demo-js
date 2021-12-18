@@ -1,0 +1,6 @@
+current line: 8
+
+repeatedString = '*_'
+lineLength = 3
+result = '*_*_'
+

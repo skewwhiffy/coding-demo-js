@@ -1,7 +1,15 @@
-function writeOneLine(repeatedString, lineLength) {
+const firstTest = getSingleLine('*_', 3) // Expecting this to print *_*
+console.log(firstTest)
+
+const secondTest = getSingleLine('_*', 10) // Expecting this to print _*_*_*_*_*
+console.log(secondTest)
+
+pattern(3)
+pattern(10)
+
+function getSingleLine(repeatedString, lineLength) {
   let result = ''
   while (result.length < lineLength) {
-    // console.log('Result is of length ' + result.length)
     result = result + repeatedString
   }
   return result.substring(0, lineLength)
@@ -15,16 +23,7 @@ function pattern(length) {
     } else {
       repeatedString = '_*'
     }
-    const line = writeOneLine(repeatedString, length)
+    const line = getSingleLine(repeatedString, length)
     console.log(line)
   }
 }
-
-const firstTest = writeOneLine('*_', 3) // Expecting this to print *_*
-console.log(firstTest)
-
-const secondTest = writeOneLine('_*', 10) // Expecting this to print _*_*_*_*_*
-console.log(secondTest)
-
-pattern(3)
-pattern(10)
